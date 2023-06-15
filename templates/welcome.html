@@ -1,10 +1,20 @@
 {% extends "layout.html"%}
 {% block content %}
+<style>
+    #audio{
+        padding-left: 0%;
+    }
+    #mo{
+        color: red;
+        font-size: large;
+    }
+</style>
 <link rel=stylesheet type=text/css href="{{ url_for('static',filename='styleforall.css') }}">
 <h1>WelCome to My Digital Portfolio.</h1>
-<h1>Its Me Suddu Ramesh,</h1><br>
-<h2> Click on the below play button to know the pronunciation of my name.</h2>
-<audio controls>
+<h1>Its Me Suddu Ramesh,</h1>
+
+<h2 id="mo"> <marquee scrollamount="15"> Click on the below play button to know the pronunciation of my name.</h2></marquee>
+<audio controls id="audio">
     <source src="static\audio\name.mp3" type="audio/mpeg"> 
 </audio>
 
