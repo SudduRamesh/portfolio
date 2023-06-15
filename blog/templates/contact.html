@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+  #more {
+
+  cursor:pointer;
+}
+
+</style>
+
+<form method="POST" action="{{ url_for('contact') }}">
+  <label for="name">NAME:    </label>
+  <input type="text" id="name" name="name" required><br><br>
+  <label for="email">EMAIL:    </label>
+  <input type="text" id="email" name="email" required><br><br>
+  <label for="message">MESSAGE:</label>
+  <input type="text" id="message" name="message" required><br><br>
+
+
+  </select>
+
+  <input id="more" type="submit" value="SEND" >
+</form>
+
+<br>
+<h3 class="media"> Click below to Follow me on Social Media. </h3>
+<a href="https://twitter.com/RameshSuddu?t=_hCp4S5ydTkmjkPstTcMyQ&s=03" target="blank"><img src="static/img/twitter_icon.png" class="icon"></a>
+<a href="https://www.linkedin.com/in/suddu-ramesh" target="blank"><img src="static/img/linkedin_icon.png" class="icon"></a>
+<a href="mailto:sudduramesh371@gmail.com"><img src="static/img/gmail_icon.png" class="icon"></a><br>
+<center>
+	<p> Click the below-given button to download My CV. </p>
+	<button id="more" onclick = "demo()" > Download The File </button>
+</center>
+<script>
+	function demo() {
+    var a = document.createElement('a');
+    a.href = "static/cv/Ramesh.pdf";
+    a.download = 'download'
+    a.click();
+	}
+</script>
+
+{% endblock content %}
+

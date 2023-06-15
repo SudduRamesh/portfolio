@@ -1,0 +1,11 @@
+{% extends "layout.html"%}
+{% block content %}
+<link rel=stylesheet type=text/css href="{{ url_for('static',filename='styleforall.css') }}">
+<h1>WelCome to My Digital Portfolio.</h1>
+<h1>Its Me Suddu Ramesh,</h1><br>
+<h2> Click on the below play button to know the pronunciation of my name.</h2>
+<audio controls>
+    <source src="static\audio\name.mp3" type="audio/mpeg"> 
+</audio>
+
+{% endblock content%}
